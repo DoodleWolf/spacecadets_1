@@ -6,6 +6,8 @@ public class Main{
 	public static void main(String[] args) throws Exception{
 		BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
 		String strLine = input.readLine();
+		String[] arr = strLine.split("@");
+		strLine = arr[0];
 		URL ecs = new URL("https://www.ecs.soton.ac.uk/people/" + strLine);
 		BufferedReader web = new BufferedReader(new InputStreamReader(ecs.openStream()));
 		Boolean notFound = true;
